@@ -450,10 +450,6 @@ main > .section:first-child {
   font-variant-numeric: tabular-nums;
 }
 
-.schedule .hl td {
-  background: #f5f6ff;
-}
-
 /* ---------- People ---------- */
 .people {
   display: flex;
