@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ProMo · Workshop on Proactive Video Models · CVPR 2027</title>
-  <meta name="description" content="ProMo: 1st Workshop on Proactive Video Models at CVPR 2027, Seattle. Invited talks, a peer-reviewed paper track, a competition track, and a panel on how to evaluate proactive video AI.">
+  <meta name="description" content="ProMo: 1st Workshop on Proactive Video Models at CVPR 2027, Seattle. Invited talks, a peer-reviewed paper track, a competition, and a panel on proactive AI.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="ProMo · 1st Workshop on Proactive Video Models · CVPR 2027">
-  <meta property="og:description" content="Invited talks, a peer-reviewed paper track, a competition track, and a panel on how to evaluate proactive video AI. CVPR 2027, Seattle.">
+  <meta property="og:description" content="Invited talks, a peer-reviewed paper track, a competition, and a panel on proactive AI. CVPR 2027, Seattle.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +55,7 @@
     <section class="section" id="overview">
       <div class="container">
         <div class="section-head"><h2>Overview</h2></div>
-        <p class="abstract">Video models today are largely reactive: they respond only when asked, on clips that have already ended. Real-world systems such as wearable assistants, robots, autonomous vehicles must instead watch an unbounded stream and decide on their own when to speak, warn, or act. This workshop brings together researchers in egocentric, robotic, and streaming video understanding to study <em>proactivity</em> as a core capability: knowing when to interrupt, anticipating human intent from video and audio, ensuring proactive safety in real time, and explaining decisions through interactive visuals. The program features invited talks, a peer-reviewed paper track, a competition track, and a panel on how to evaluate proactive video AI.</p>
+        <p class="abstract">Video models today are largely reactive. They respond only when asked, on clips that have already ended. Real-world systems such as wearable assistants, robots, and autonomous vehicles must instead watch an unbounded stream and decide when to speak, warn, or act. This workshop brings together researchers in egocentric, robotic, and streaming video understanding to study <em>proactivity</em> as a core capability: knowing when to interrupt, anticipating human intent from video and audio, ensuring proactive safety in real time, and explaining decisions through interactive visuals. The program features invited talks, a peer-reviewed paper track, a competition, and a panel on proactive AI.</p>
       </div>
     </section>
 
@@ -120,14 +120,16 @@
         <div class="section-head"><h2>Competition</h2></div>
         <div class="split">
           <div class="stack">
-            <p class="lead">A challenge on proactive memory in streaming egocentric video on wearable devices, built on the <strong>ProactEgoMem</strong> benchmark. A system watches an egocentric video stream one second at a time, receives no user query, and decides on its own when to act and what to remember.</p>
+            <p class="lead">A challenge on proactive memory in streaming egocentric video, built on the <a href="https://proactegomem.github.io/"><strong>ProactEgoMem</strong></a> benchmark. A system watches an egocentric video stream without any user query and, from inferred user intent, decides on its own when to act and what to remember. Participation is open to academic and industrial teams.</p>
             <ul class="bullets">
-              <li><strong>Tasks:</strong> Information Capture · State Tracking · Location Tracking</li>
-              <li><strong>Levels:</strong> Notification (one timely message) · Intervention (run a background memory tool, then answer questions from memory)</li>
-              <li><strong>Tracks:</strong> ProactEgoMem-Daily (Ego4D) · ProactEgoMem-Sci (lab recordings)</li>
-              <li><strong>Ranking:</strong> ProactEgoMem score: the mean of Notification F1, Intervention mIoU, and QA accuracy, averaged over the three tasks and both tracks. Scored on a held-out test set through an evaluation server with a public leaderboard.</li>
+              <li><strong>Tasks:</strong> Information Capture (preserve transient informative details) · State Tracking (follow object states) · Location Tracking (record object placements)</li>
+              <li><strong>Levels:</strong> Notification (send one timely message) · Intervention (maintain a background memory tool to proactively acquire memory)</li>
+              <li><strong>Data:</strong> 400 egocentric video clips (22.5 hours) in two tracks: Daily (300 clips from Ego4D, 1,000 questions) · Science (100 laboratory clips from FineBio, BioVL-QR, and Ego4D, 500 questions). Fifty development clips are released with labels.</li>
+              <li><strong>Evaluation:</strong> Held-out test set, scored with a standard evaluation script on an evaluation server with a public leaderboard. Metrics: timing (Start@0.2), detection (precision, recall, F1), lifecycle overlap (mIoU), and QA accuracy from each system's proactive memory.</li>
+              <li><strong>Rules:</strong> At most three submissions per team, and one team per institution. Finalists provide code or a reproducible description of their method.</li>
             </ul>
-            <p class="note">Top-ranked teams present at the workshop and are invited to submit a technical report.</p>
+            <p class="note">Hosted on <a href="https://www.codabench.org/competitions/18340/">CodaBench</a> (evaluation server and public leaderboard) <span class="pill">In preparation</span></p>
+            <p class="note">Top entries present their methods in a dedicated results session, and winning teams are invited to submit a technical report.</p>
           </div>
           <div class="card card-dates">
             <h3 class="card-title">Important dates <span class="pill">Tentative</span></h3>
@@ -152,15 +154,16 @@
         <p class="note center">Tentative · local time</p>
         <table class="schedule">
           <tbody>
-            <tr class="slot"><td class="time">13:30–13:45</td><td class="session">Opening remarks</td></tr>
-            <tr class="slot"><td class="time">13:45–14:15</td><td class="session">Invited talk 1 — <strong>Kristen Grauman</strong></td></tr>
-            <tr class="slot"><td class="time">14:15–14:45</td><td class="session">Invited talk 2 — <strong>Angela Yao</strong></td></tr>
-            <tr class="slot"><td class="time">14:45–15:30</td><td class="session">Coffee break and poster session</td></tr>
-            <tr class="slot"><td class="time">15:30–16:15</td><td class="session">Oral session &amp; competition track</td></tr>
-            <tr class="slot"><td class="time">16:15–16:45</td><td class="session">Invited talk 3 — <strong>Fahad Shahbaz Khan</strong></td></tr>
-            <tr class="slot"><td class="time">16:45–17:15</td><td class="session">Invited talk 4 — <strong>Katerina Fragkiadaki</strong></td></tr>
-            <tr class="slot"><td class="time">17:15–17:55</td><td class="session">Panel discussion</td></tr>
-            <tr class="slot"><td class="time">17:55–18:00</td><td class="session">Closing remarks</td></tr>
+            <tr class="slot"><td class="time">13:20–13:30</td><td class="session">Opening remarks</td></tr>
+            <tr class="slot"><td class="time">13:30–14:00</td><td class="session">Invited talk 1 — <strong>Kristen Grauman</strong></td></tr>
+            <tr class="slot"><td class="time">14:00–14:30</td><td class="session">Invited talk 2 — <strong>Angela Yao</strong></td></tr>
+            <tr class="slot"><td class="time">14:30–15:00</td><td class="session">Invited talk 3 — <strong>Fahad Shahbaz Khan</strong></td></tr>
+            <tr class="slot"><td class="time">15:00–16:00</td><td class="session">Coffee break and poster session</td></tr>
+            <tr class="slot"><td class="time">16:00–16:30</td><td class="session">Oral session &amp; competition track</td></tr>
+            <tr class="slot"><td class="time">16:30–17:00</td><td class="session">Invited talk 4 — <strong>Katerina Fragkiadaki</strong></td></tr>
+            <tr class="slot"><td class="time">17:00–17:30</td><td class="session">Invited talk 5 — <strong>Federico Carnevale</strong></td></tr>
+            <tr class="slot"><td class="time">17:30–18:00</td><td class="session">Panel discussion</td></tr>
+            <tr class="slot"><td class="time">18:00–18:05</td><td class="session">Closing remarks</td></tr>
           </tbody>
         </table>
       </div>
@@ -190,6 +193,11 @@
             <img class="avatar" src="assets/img/people/katerina-fragkiadaki.jpg" alt="Katerina Fragkiadaki">
             <p class="name"><a href="https://www.cs.cmu.edu/~katef/">Katerina Fragkiadaki</a></p>
             <p class="affil">Carnegie Mellon University</p>
+          </div>
+          <div class="person">
+            <img class="avatar" src="assets/img/people/federico-carnevale.jpg" alt="Federico Carnevale">
+            <p class="name"><a href="https://sites.google.com/site/federcarnevale/">Federico Carnevale</a></p>
+            <p class="affil">Google DeepMind</p>
           </div>
         </div>
       </div>
