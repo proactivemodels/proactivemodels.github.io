@@ -215,6 +215,26 @@ a:hover {
   background: #e6e8f5;
 }
 
+/* Small light-background button, e.g. the CodaBench link in Competition */
+.btn-sm {
+  padding: 6px 14px;
+  border-color: rgba(79, 70, 229, 0.3);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.btn-sm:hover {
+  background: #e0e3ff;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
 /* ---------- Sections ---------- */
 .section {
   padding: 72px 0;
